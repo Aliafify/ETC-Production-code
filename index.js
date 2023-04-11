@@ -57,12 +57,12 @@ app.use('/api',registerWithAppointment)
 app.use("/api",productRoutes);
 app.use("/api",Translation);
 app.use(express.static("build"));
-app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.use(express.static(path.resolve(__dirname, "./build")));
 app.get("/*", function (req, res) {
   res.sendFile(
     path.join(
       __dirname,
-      "../client/build/index.html" 
+      "./build/index.html" 
     ),
     function (err) {
       if (err) {
