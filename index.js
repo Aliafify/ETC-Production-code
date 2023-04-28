@@ -18,12 +18,16 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const path = require("path")
-
+//portfolio
+const addPortfolioProject = require("./portfolio/addProject");
 // -----------End Of Imports
  
 // --------------connect to mongoDB--------------
+
 mongoose.set("useCreateIndex", true); //for warning
+
 main().catch((err) => console.log(err));
+
 // ------- End MongoDB 
 
 const app = express();
@@ -52,10 +56,12 @@ app.use("/api", routes1);
 app.use("/api", routes2);
 app.use("/api",routes3);
 // app.use("/api",upload)
-app.use('/api',appointmentsRoutes)
-app.use('/api',registerWithAppointment)
+app.use('/api',appointmentsRoutes);
+app.use('/api',registerWithAppointment);
 app.use("/api",productRoutes);
 app.use("/api",Translation);
+app.use('/api',addPortfolioProject);
+
 app.use(express.static("build"));
 app.use(express.static(path.resolve(__dirname, "./build")));
 app.get("/*", function (req, res) {

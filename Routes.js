@@ -65,6 +65,7 @@ Router.get("/auth", async (req, res) => {
 Router.post("/login", auth);
 function auth(req, res, next) {
   try {
+    console.log(req.body)
     passport.authenticate("local", (err, user, info) => {
       if (err) throw err;
       if (!user) res.send({ user: null, auth: false,state:null });
@@ -81,7 +82,7 @@ function auth(req, res, next) {
       }
     })(req, res, next);
   } catch (err) {
-    res.send(err);
+    res.send(err.message);
   }
 }
 Router.get("/logout", function (req, res) { 

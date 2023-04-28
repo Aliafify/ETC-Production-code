@@ -8,7 +8,7 @@ module.exports = function (passport) {
   passport.use(
     new localStrategy((username, password, done) => {
       Admin.findOne({ email: username }).then((user) => {
-        //console.log("user")
+        console.log("user")
         if (!user) {
           Account2.findOne({ email: username }).then((user) => {
             if (user) {
