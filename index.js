@@ -32,7 +32,7 @@ main().catch((err) => console.log(err));
 
 const app = express();
 app.use(cors({
-  origin: "http://localhost:3000", // <-- location of the react app were connecting to
+  origin: ["http://localhost:3000","https://eastern-techno.com"], // <-- location of the react app were connecting to
   credentials: true,
 }));
 app.use(bodyParser.json());
