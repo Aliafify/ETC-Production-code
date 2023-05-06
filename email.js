@@ -25,7 +25,7 @@ const nodemailer = require("nodemailer");
 // 	  console.log("Server is ready to take our messages");
 // 	}
 //   });
-module.exports = async (email, subject, text) => {
+module.exports = async (email, subject, text,html,attachments) => {
 	try {
 		const transporter = nodemailer.createTransport({
 			host: process.env.HOST,
@@ -39,10 +39,12 @@ module.exports = async (email, subject, text) => {
 		});
 
 		await transporter.sendMail({
-			from: process.env.USER,
+			from: `ETC <${process.env.USER}>`,
 			to: email,
 			subject: subject,
 			text: text,
+			html:html,
+			attachments:attachments
 		});
 		console.log("email sent successfully");
 	} catch (error) {

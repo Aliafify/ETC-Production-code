@@ -10,6 +10,8 @@ const Translation = require('./translationRoutes')
 const appointmentsRoutes = require('./appointmentRoutes')
 const registerWithAppointment = require('./loginRegister')
 const productRoutes = require('./productRoutes')
+const contactUs = require('./contact');
+
 // const upload = require("./upload")
 var passport = require("passport");
 const passportLocal = require("passport-local").Strategy;
@@ -61,7 +63,7 @@ app.use('/api',registerWithAppointment);
 app.use("/api",productRoutes);
 app.use("/api",Translation);
 app.use('/api',addPortfolioProject);
-
+app.use('/api',contactUs);
 app.use(express.static("build"));
 app.use(express.static(path.resolve(__dirname, "./build")));
 app.get("/*", function (req, res) {

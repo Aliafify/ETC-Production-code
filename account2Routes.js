@@ -1,6 +1,6 @@
 const express = require('express') 
-const Account2 =require('./Account2Schema.js')
 const Router =express.Router();
+const Account2 =require('./Account2Schema.js')
 const bcrypt= require("bcryptjs");
 const { fetchData, updatElement } = require('./mongoose.js');
 

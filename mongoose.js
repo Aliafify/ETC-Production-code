@@ -5,7 +5,7 @@ const localLink = process.env.LOCAL_DATABASE
 async function main() {
   await mongoose.connect(link,
     {
-      useNewUrlParser: true,
+      useNewUrlParser: true, 
       useUnifiedTopology: true,
     },
     () => {  
