@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "build": "netlify deploy --prod",
     "server": "nodemon index.js",
     "dev": "concurrently \"nodemon index.js\" \"cd .././client && npm start\""
   },
@@ -14,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@trycourier/courier": "^4.1.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^7.6.0",
@@ -29,9 +27,6 @@
     "nodemailer": "^6.7.2",
     "nodemon": "^2.0.20",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "netlify-cli": "^12.7.2",
-    "netlify-lambda": "^2.0.15",
-    "serverless-http": "^2.7.0"
+    "passport-local": "^1.0.0"
   }
 }

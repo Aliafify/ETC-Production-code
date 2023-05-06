@@ -2,16 +2,19 @@ const express = require('express')
 const Router =express.Router();
 const email = require('./email');
 const fs = require('fs');
+const nodemailer = require("nodemailer");
 
 // Read logo file from disk
 const logoData = fs.readFileSync('./uploads/logo-ETC.png');
 
 // const logo = require('./uploads/logo-ETC.png')
 Router.post('/contact', (req,res)=>{
+  try{
     const data = req.body;
    // email,subject, text, html
    console.log(data)
-   const emailTo = ['ali.afifi.h@gmail.com','pmx.4.2022@gmail.com']
+
+   const emailTo = ['ali.afifi.h@gmail.com','ali.afify93746@gmail.com']
    const subject = data.subject
    const text = '';
    const attatchments =  [
@@ -33,10 +36,34 @@ Router.post('/contact', (req,res)=>{
   </ul> 
   
   </div></div>`;
-email(emailTo,'Service Request',text,html,attatchments)
-.then((data)=>{console.log('response',data)})
-.catch(e=>console.log(e.message))
-res.status(200).send('sent')
+
+  const transporter = nodemailer.createTransport({
+    host: process.env.HOST,
+    service: process.env.SERVICE,
+    port: Number(process.env.EMAIL_PORT),
+    secure: Boolean(process.env.SECURE),
+    auth: {
+      user: process.env.USER,
+      pass: process.env.PASS,
+    },
+  })
+  const mailOptions = {
+    from: `ETC <${process.env.USER}>`,
+    to: emailTo,
+    subject: 'Service Request',
+    html: html,
+           attachments:attatchments
+  };
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(500).send('Error sending email');
+    } else {
+      console.log('Email sent: ' + info.response);
+      res.status(200).send('Email sent successfully');
+    }
+  });
+  }catch(e){res.send(e.message)}
 })
 
 module.exports = Router

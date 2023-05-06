@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f6b5ba82.css",
-    "main.js": "/static/js/main.fa7ea4bb.js",
+    "main.css": "/static/css/main.a61887f4.css",
+    "main.js": "/static/js/main.0bbd8b2e.js",
     "static/js/787.c93d28ce.chunk.js": "/static/js/787.c93d28ce.chunk.js",
     "static/media/Alfutim.webm": "/static/media/Alfutim.ea8fe71255c1ab64892e.webm",
     "static/media/AGA.webm": "/static/media/AGA.6c55ce380db7c720744d.webm",
@@ -16,12 +16,12 @@
     "static/media/contact.jpg": "/static/media/contact.6f9af30f1b32caae77ea.jpg",
     "static/media/portfolio.jpeg": "/static/media/portfolio.2a808beb81288c7cfce4.jpeg",
     "index.html": "/index.html",
-    "main.f6b5ba82.css.map": "/static/css/main.f6b5ba82.css.map",
-    "main.fa7ea4bb.js.map": "/static/js/main.fa7ea4bb.js.map",
+    "main.a61887f4.css.map": "/static/css/main.a61887f4.css.map",
+    "main.0bbd8b2e.js.map": "/static/js/main.0bbd8b2e.js.map",
     "787.c93d28ce.chunk.js.map": "/static/js/787.c93d28ce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6b5ba82.css",
-    "static/js/main.fa7ea4bb.js"
+    "static/css/main.a61887f4.css",
+    "static/js/main.0bbd8b2e.js"
   ]
 }
