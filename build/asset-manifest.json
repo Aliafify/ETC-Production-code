@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ac5d2211.css",
-    "main.js": "/static/js/main.2d4b0e9a.js",
+    "main.js": "/static/js/main.a59b57e7.js",
     "static/js/787.c93d28ce.chunk.js": "/static/js/787.c93d28ce.chunk.js",
     "static/media/Alfutim.webm": "/static/media/Alfutim.ea8fe71255c1ab64892e.webm",
     "static/media/AGA.webm": "/static/media/AGA.6c55ce380db7c720744d.webm",
@@ -18,11 +18,11 @@
     "static/media/portfolio.jpeg": "/static/media/portfolio.2a808beb81288c7cfce4.jpeg",
     "index.html": "/index.html",
     "main.ac5d2211.css.map": "/static/css/main.ac5d2211.css.map",
-    "main.2d4b0e9a.js.map": "/static/js/main.2d4b0e9a.js.map",
+    "main.a59b57e7.js.map": "/static/js/main.a59b57e7.js.map",
     "787.c93d28ce.chunk.js.map": "/static/js/787.c93d28ce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ac5d2211.css",
-    "static/js/main.2d4b0e9a.js"
+    "static/js/main.a59b57e7.js"
   ]
 }
